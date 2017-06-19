@@ -43,5 +43,5 @@ run_analysis <- function() {
   
   # Extract means, grouped by Activity and Subject (For 5)
   tidy_data_means = data %>% group_by(Activity, Subject) %>% summarise_all(mean)
-  
+  write.table(tidy_data_means, "tidy_data_means.txt", row.names = FALSE)
 }
